@@ -1,9 +1,9 @@
 function checkPassword() {
-    const input = document.getElementById('passwordInput').value;
+    const input = document.getElementById('passwordInput').value.toLowerCase().trim();
     const hashedInput = CryptoJS.SHA256(input).toString();
-    const correctHash = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; 
-    if (hashedInput === correctHash) {
-        alert("You shouldn't be here yet... but you guessed well! Come back when the website is done.");
+    const correctHash = 'b133a0c0e9bee3be20163d2ad31d6248db292aa6dcb1ee087a2aa50e0fc75ae2'; 
+    if (hashedInput === correctHash) { 
+        alert('Correct! Go to tinyurl.com/' + input + "-boyfriend");
     } else {
         alert('Incorrect!');
     }
